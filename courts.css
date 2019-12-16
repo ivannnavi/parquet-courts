@@ -1,0 +1,435 @@
+* {
+  margin: 0;
+  padding: 0;
+  cursor: url("mickeymouse.png"), auto;
+}
+
+html {
+}
+
+body {
+  background-color: #c55347;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-family: aktiv-grotesk-condensed, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  color: #fcd14e;
+}
+
+h3 {
+  font-family: aktiv-grotesk, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+p {
+  font-family: aktiv-grotesk, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.wrapper {
+  background-color: #c55347;
+}
+
+.colorShimmer {
+  background-color: #c55347;
+  animation: colorShimmer;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-duration: 0.6s;
+}
+
+@keyframes colorShimmer {
+  0% {
+    background-color: rgb(10, 228, 166);
+  }
+  50% {
+    background-color: rgb(253, 197, 76);
+  }
+  100% {
+    background-color: rgb(50, 12, 201);
+  }
+}
+
+.main {
+  margin-top: 0;
+  margin-bottom: 10em;
+  padding: 0em 5em 2.5em 5em;
+}
+#title {
+  font-size: 2.5em;
+  line-height: 0.75em;
+  padding: 1em 2em;
+  text-align: left;
+  margin-bottom: 2em;
+}
+
+#title a {
+  color: black;
+  text-decoration: underline;
+  /*
+  color: #fcd14e; */
+}
+
+#title a:hover {
+  color: #fcd14e;
+}
+
+#icons {
+  display: inline-block;
+  position: absolute;
+  right: 5%;
+  color: black;
+  top: 7.5%;
+}
+
+#icons i {
+  width: 25px;
+  transform: scale(1.5);
+}
+#icons a:hover {
+  color: #fcd14e;
+}
+
+#tour-dates {
+}
+
+#tour-dates div {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  border-bottom: solid 1px black;
+  font-size: 1.17em;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+}
+
+#tour-dates div:nth-child(1n) {
+  padding-left: 1em;
+}
+
+.flashy {
+  transition: 0.4s ease;
+}
+
+#bottom-menu {
+  z-index: 1;
+  background-color: #c55347;
+
+  position: fixed;
+  width: 100%;
+
+  bottom: 0;
+}
+
+.menu-itself {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  overflow-y: hidden;
+  font-size: 1.5em;
+}
+
+.menu-itself div {
+  height: 100%;
+  padding: 1.5em;
+}
+
+label {
+  font-size: 30px;
+  line-height: 70px;
+  display: none;
+}
+
+#toggle {
+  display: none;
+}
+
+/* signup page */
+
+#signup {
+  font-size: 2em;
+  position: relative;
+  left: 20%;
+  margin-top: 0em;
+}
+
+#signup input {
+  background-color: #fff8de;
+  margin-top: 10px;
+  margin-bottom: 0;
+  border: 1px solid black;
+  padding: 0 10px;
+  width: 50%;
+  height: 70px;
+  font-family: aktiv-grotesk-condensed, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 1.25em;
+}
+
+#signup label {
+  color: black;
+}
+
+#signup button {
+  background-color: transparent;
+  font-size: 0.75em;
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-left: none;
+  color: #fcd14e;
+
+  border-right: none;
+
+  font-family: aktiv-grotesk-condensed, sans-serif;
+  font-weight: 800;
+}
+
+/* contact page */
+
+#contact-info a {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1.5em;
+  border-bottom: 1px black solid;
+  font-size: 1.17em;
+}
+
+#contact-info {
+}
+#contact-info p {
+  vertical-align: middle;
+}
+/* video page */
+
+/* #constrain {
+  width: 100vw;
+  margin: 1em;
+padding: 2.5em;
+}
+*/
+.video-wrapper {
+  height: 700px;
+  padding: 0 1em 1em 1em;
+  margin-top: -4em;
+}
+
+.videos {
+  display: inline-block;
+  padding: 0 1em 1em 1em;
+}
+
+.videos video {
+}
+
+.videos h3 {
+  padding-bottom: 1em;
+  font-size: 1.5em;
+}
+
+/* listen page */
+
+#discography {
+}
+
+#discography .flashy {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  xmargin-top: 1em;
+  xmargin-bottom: 1em;
+  border-bottom: solid 1px black;
+  grid-column-gap: 1.5em;
+}
+.top {
+  border-top: solid 1px black;
+}
+#discography a h3 {
+  padding-top: 1em;
+  display: block;
+  line-height: 2em;
+}
+#discography a h3 span {
+  padding: 5px;
+  border: solid 1px black;
+}
+#discography a:hover h3 span {
+  background: white;
+}
+#discography img {
+  width: 20%;
+  max-width: 300px;
+  height: auto;
+  margin: 1em;
+  border: solid 1px black;
+  float: left;
+}
+
+.description h3:nth-child(even) {
+  margin-bottom: auto;
+  margin-top: 3em;
+  color: #fcd14e;
+  font-family: aktiv-grotesk-condensed, sans-serif;
+  text-decoration: underline;
+  margin-right: 0;
+}
+
+#opaque {
+  transition: 2s ease;
+}
+
+#burger {
+  width: 100%;
+  background-color: #c55347;
+  border: none;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
+  display: none;
+  height: 40px;
+  transition: 2s ease;
+  position: fixed;
+  bottom: 0;
+  z-index: 99999;
+}
+
+#bottom-menu-two {
+  position: fixed;
+  transition: 2s ease;
+  bottom: 0em;
+  width: 100%;
+  z-index: 1;
+  background-color: #c55347;
+}
+
+.menu-itself-two {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  overflow-y: hidden;
+  font-size: 1.17em;
+}
+
+.menu-itself-two div {
+  height: 100%;
+  padding: 1.5em;
+}
+
+/* resize */
+
+@media only screen and (max-width: 500px) {
+  #title {
+    font-size: 2.5em;
+    padding: 0.5em;
+  }
+  #tour-dates {
+    padding: 1em;
+  }
+
+  #tour-dates div {
+    font-size: 0.85em;
+  }
+  #icons {
+    top: 4%;
+  }
+  #icons i {
+    width: 12px;
+    transform: scale(1.25);
+    padding: 0 0.25em;
+  }
+  #signup {
+    padding: 1em;
+    margin: 1em;
+    margin-left: -2.5em;
+  }
+  #signup input {
+    width: 80%;
+  }
+
+  #signup label {
+    display: none;
+  }
+  #contact-info {
+    grid-template-columns: 1fr;
+    padding: 1em;
+  }
+
+  #contact-info div {
+    font-size: 0.625em;
+  }
+  .line-rule {
+    font-size: 0.75em;
+  }
+  .video-wrapper {
+    height: 400px;
+  }
+  .videos {
+    width: 100%;
+    padding: 1em;
+  }
+  #discography {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1em;
+  }
+  #discography img {
+    width: 100%;
+  }
+  #discography h3 {
+    font-size: 0.9em;
+  }
+
+  #burger {
+    display: flex;
+  }
+
+  #bottom-menu-two {
+    bottom: -20em;
+  }
+  .menu-itself-two {
+    grid-template-columns: 1fr;
+    font-size: 0.85em;
+    border-bottom: 1px solid black;
+  }
+
+  .menu-itself-two div {
+    border-bottom: 1px solid black;
+  }
+
+  label {
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+  }
+  .menu-itself {
+    text-align: center;
+    display: none;
+    margin: 0;
+  }
+  .menu-itself h3 {
+    padding-top: 0.125em;
+    padding-bottom: 0.125em;
+    border-bottom: solid 1px black;
+  }
+  #toggle:checked + .menu-itself {
+    display: block;
+    animation: moveUp;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+  }
+  @keyframes moveUp {
+    0% {
+      .menu-itself {
+        transform: ;
+      }
+    }
+  }
+}

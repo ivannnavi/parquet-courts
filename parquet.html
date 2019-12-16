@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Parquet Courts</title>
+  <!-- hi sluts -->
+
+  <link rel="stylesheet" type="text/css" href="courts.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.typekit.net/mly4ecx.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://kit.fontawesome.com/6400822321.js"></script>
+
+  <!-- <style>
+  #tour-dates .ui-selected { background: #FCD14E; color: black; }
+  #bottom-menu .ui-selected { background: #1FC902; color: black; }
+</style> -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="pc js experiment.js"></script>
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <h1 id="title"><a href="parquet.html">Parquet Courts</a></h1>
+    <div id="icons">
+      <a href="#"><i class="fab fa-facebook-square"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-spotify"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <div id="tour-dates" class="main">
+      <h3 style="border-bottom: solid 1px black; text-transform: uppercase;">Tour Dates</h3>
+
+      <div class="flashy" onclick="colorShimmer()">
+        <h3>02/14</h3>
+        <h3>Berlin</h3>
+        <h3>Berghain</h3>
+      </div>
+      <div class="flashy" onclick="colorShimmer()">
+        <h3>02/31</h3>
+        <h3>Moscow</h3>
+        <h3>Glavklub</h3>
+      </div>
+      <div class="flashy" onclick="colorShimmer()">
+        <h3>03/05</h3>
+        <h3>Amsterdam</h3>
+        <h3>Melkweg</h3>
+      </div>
+      <div class="flashy" onclick="colorShimmer()">
+        <h3>03/20</h3>
+        <h3>Hong Kong</h3>
+        <h3>Nom Wah</h3>
+      </div>
+      <div class="flashy" onclick="colorShimmer()">
+        <h3>04/02</h3>
+        <h3>Tokyo</h3>
+        <h3>Stargaze Lounge</h3>
+      </div>
+      <div class="flashy" onclick="colorShimmer()">
+        <h3>04/05</h3>
+        <h3>New York</h3>
+        <h3>The Knitting Factory</h3>
+      </div>
+      <div class="flashy" onclick="colorShimmer()">
+        <h3>04/07</h3>
+        <h3>Boston</h3>
+        <h3>Sinclair</h3>
+      </div>
+      <div class="flashy" onclick="colorShimmer()">
+        <h3>04/11</h3>
+        <h3>Portland, MA</h3>
+        <h3>Uncle's Shed</h3>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <div id="opaque" style="width: 100vw; height: 100vh; background: black; opacity: 0; position: fixed; top: 0; display: none;">
+
+  </div>
+
+
+  <button id='burger' onclick="moveUp()" style="justify-content: center; height: 50px;">
+<div style="height: 25px; width: 50px; display: flex; justify-content: center; align-items: center; text-align: center; padding: .05em;">
+  <div style="background: black; width: 5px; height: 22px; transform: rotate(5deg);">
+
+  </div>
+  <div style="background: black; width: 5px; height: 22px; margin: 0 .5em; transform: rotate(20deg);">
+
+  </div>
+  <div style="background: black; width: 5px; height: 22px; transform: rotate(70deg) translateX(6px);">
+
+  </div>
+</div>
+  </button>
+
+  <div id="bottom-menu-two">
+
+    <div class="menu-itself-two" style="border-top: solid 1px black; ">
+
+      <a href='signup.html' class="flashy " onclick="colorShimmer() "><span class="first "><div><h3>Sign Up</h3></div> </span></a>
+      <a href='contact.html' class="flashy " onclick="colorShimmer() ">
+        <div style="border-right: solid 1px black; border-left: solid 1px black; ">
+          <h3>Contact</h3></div>
+      </a>
+      <a href='videos.html' class="flashy " onclick="colorShimmer() ">
+        <div>
+          <h3>Videos</h3></div>
+      </a>
+      <a href='listen.html' class="flashy " onclick="colorShimmer() ">
+        <div style="border-right: solid 1px black; border-left: solid 1px black; ">
+          <h3>Listen</h3></div>
+      </a>
+      <a href='https://www.hellomerch.com/collections/parquet-courts' class="flashy " onclick="colorShimmer() "><span class="last "><div><h3>Merch</h3></div></span></a>
+    </div>
+  </div>
+
+  <script>
+    function colorShimmer() {
+      var animation = document.getElementsByClassName("wrapper");
+      animation[0].className = "colorShimmer";
+      setTimeout("bringBack() ", 1000);
+    }
+
+    function bringBack() {
+      var wrap = document.getElementsByClassName("colorShimmer");
+      wrap[0].className = "wrapper";
+    }
+
+    function moveUp() {
+      var burger = document.getElementById("burger");
+      var menu = document.getElementById("bottom-menu-two");
+      var opaque = document.getElementById("opaque");
+
+      if (burger.style.bottom === "" || burger.style.bottom === "0px") {
+        burger.style.bottom = "28em";
+        menu.style.bottom = "0";
+        $('#burger').css('box-shadow', '0 0 20px #fcd14e');
+        opaque.style.opacity = '.5';
+        opaque.style.display = 'block';
+      } else {
+        burger.style.bottom = "0";
+        menu.style.bottom = "-20em";
+        $('#burger').css('box-shadow', 'none');
+        opaque.style.opacity = '0';
+        opaque.style.display = 'none';
+
+
+      }
+    }
+  </script>
+
+
+
+</body>
+
+</html>
